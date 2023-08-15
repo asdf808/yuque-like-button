@@ -5,3 +5,37 @@
 html, body, #app{
   height: 100%;
 }
+
+.like-button {
+  height: 160px;
+  width: 160px;
+  background: url('https://gw.alipayobjects.com/mdn/prod_resource/afts/img/A*eDsBTKcm1IcAAAAAAAAAAAAAARQnAQ');
+  cursor: pointer;
+}
+
+.like-button:hover {
+  transform-origin: 50px 134px;
+  animation: hover-animate 1s infinite ease-out;
+}
+
+.like-button.liked {
+  animation: click-animate 1s steps(27) 1 forwards;
+}
+
+@keyframes hover-animate {
+  25% {
+    transform: rotate(6deg)
+  }
+  75% {
+      transform: rotate(-6deg)
+  }
+  100% {
+      transform: rotate(0)
+  }
+}
+
+@keyframes click-animate {
+  100% {
+    background-position: -4320px 0;
+  }
+}
